@@ -1,6 +1,5 @@
 from django.db import models
 
-# Modelo para representar um autor, relacionamento "um-para-muitos" será demonstrado com livros
 class Author(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField()
@@ -8,7 +7,6 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
-# Modelo para representar um livro, relacionamento "um-para-muitos" com o autor
 class Book(models.Model):
     title = models.CharField(max_length=200)
     summary = models.TextField()
